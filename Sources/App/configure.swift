@@ -10,7 +10,9 @@ public func configure(_ app: Application) throws {
 
     app.databases.use(.sqlite(.file("db.sqlite")), as: .sqlite)
 
-    app.migrations.add(CreateTodo())
+    app.migrations.add(CreateShop())
+    app.migrations.add(CreateGoods())
+    app.migrations.add(CreateCustomer())
 
     app.views.use(.leaf)
 
